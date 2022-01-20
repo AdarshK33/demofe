@@ -48,13 +48,13 @@ export const Form = (props) => {
             <form onSubmit={(e) => submit(e)}>
                  <Row >  
                      <Col md="6">
-                        <input  className="mb-3" onChange={(e) => { handle(e) }} id="name" type="text" name="name" value={data.name} placeholder="name" required></input>
+                        <input  className="mb-3" onChange={(e) => { handle(e) }} id="name" type="text" name="name" value={data.name} placeholder="Name" required></input>
                     </Col>
                       <Col md="6">
-                        <input  className="mb-3" onChange={(e) => { handle(e) }} id="description" type="text" name="description" value={data.description} placeholder="description" required ></input>
+                        <input  className="mb-3" onChange={(e) => { handle(e) }} id="description" type="text" name="description" value={data.description} placeholder="Description" required ></input>
                         </Col> 
                          <Col md="6">
-                        <input  className="mb-3" onChange={(e) => { handle(e) }} id="status" type="text" name="status" value={data.status} placeholder="status" required ></input>
+                        <input  className="mb-3" onChange={(e) => { handle(e) }} id="status" type="text" name="status" value={data.status} placeholder="Status" required ></input>
                     </Col>
                         <br></br>
                         <button type="submit" name="Submit" className="submit"><b>Submit</b></button>
