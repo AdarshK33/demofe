@@ -1,25 +1,72 @@
-import logo from './logo.svg';
+import React from 'react';
+import BootstrapTable from 'react-bootstrap-table-next';
+import { Row, Col } from 'reactstrap';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+//import Form
+import { Form } from './component/Form';
+const axios = require('axios');
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+     products : [],
+    };
+  }
+  //life cycle
+  componentDidMount() {
+    this.getMovieApi();
+  }
+  //Call Axios Get
+getMovieApi = async () => {
+    try {
+      const resp = await axios.get('http://localhost:5000/movie');
+      // Set procduts
+        this.setState({ products: resp.data.data.movie_result });
+    } catch (err) {
+        // Handle Error Here
+        console.error(err);
+    }
+};
 
-export default App;
+     render() {
+              const columns = [{
+                dataField: 'id',
+                text: 'Id'
+              }, {
+                dataField: 'name',
+                text: 'Movie Name'
+                },
+                {
+                dataField: 'description',
+                text: 'Movie Description'
+                },
+                  {
+                dataField: 'status',
+                text: 'Movie Status'
+                },
+                //    {
+                // dataField: 'created_Date',
+                // text: 'Create'
+                // },
+                //     {
+                // dataField: 'updated_date',
+                // text: 'Update'
+                // },
+                  
+              ];
+          //  console.log(this.state.products)
+       return (
+         <div className="App"> 
+             <Row>
+                      <Form />
+              <Col md="6">
+                <div  className="mb-3">
+                  <BootstrapTable keyField='id' data={this.state.products} columns={columns} />
+                </div>
+              </Col>
+              </Row>
+               </div>
+              );
+            }
+}

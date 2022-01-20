@@ -1,3 +1,7 @@
+body{
+  padding: 30px;
+  border: 20px solid green;
+}
 .App {
   text-align: center;
 }
@@ -36,3 +40,8 @@
     transform: rotate(360deg);
   }
 }
+.table {
+width: 100%;
+}
+
+
