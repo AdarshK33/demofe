@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Row, Col } from 'reactstrap';
-import './style.scss';
+//import './style.scss';
 
 const axios = require('axios');
 export const Form = (props) => {

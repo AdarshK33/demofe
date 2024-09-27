@@ -1,39 +1,39 @@
 
-$customRed: rgb(241, 99, 99);
-$red : red;
+// $customRed: rgb(241, 99, 99);
+// $red : red;
 
-input{
-    height: 50px;
-    width: 100%;
-    margin-bottom: 10px;
-}
-.submit{
-    text-align: center;
-    margin: 10px 0px 10px;
-    border: 1px solid $red;
-    color: white;
-    background-color: $customRed;
-    padding: 9px 11px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.submit :hover {
+// input{
+//     height: 50px;
+//     width: 100%;
+//     margin-bottom: 10px;
+// }
+// .submit{
+//     text-align: center;
+//     margin: 10px 0px 10px;
+//     border: 1px solid $red;
+//     color: white;
+//     background-color: $customRed;
+//     padding: 9px 11px;
+//     border-radius: 4px;
+//     cursor: pointer;
+// }
+// .submit :hover {
 
-  background-color: white !important;
-  color: black;
+//   background-color: white !important;
+//   color: black;
 
-}
-::-webkit-input-placeholder { /* Edge */
-  color: $red;
-  text-align: center;
-}
+// }
+// ::-webkit-input-placeholder { /* Edge */
+//   color: $red;
+//   text-align: center;
+// }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: $red;
-   text-align: center;
-}
+// :-ms-input-placeholder { /* Internet Explorer 10-11 */
+//   color: $red;
+//    text-align: center;
+// }
 
-::placeholder {
-  color: red;
-   text-align: center;
-}
+// ::placeholder {
+//   color: red;
+//    text-align: center;
+// }
